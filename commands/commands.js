@@ -69,6 +69,7 @@ module.exports = {
           title: songInfo.videoDetails.title,
           url: songInfo.videoDetails.video_url,
           duration: formatDuration(songInfo.videoDetails.lengthSeconds),
+          requestedBy: message.author.tag,
         };
 
         if (!serverQueue) {
@@ -321,4 +322,3 @@ function formatDuration(duration) {
   const seconds = duration % 60;
   return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
-

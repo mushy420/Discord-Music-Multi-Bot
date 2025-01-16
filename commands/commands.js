@@ -322,23 +322,3 @@ function formatDuration(duration) {
   return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
 
-Now, let's update the `package.json` file to include the new dependencies:
-
-```json type="code" project="Discord Bot" file="package.json"
-{
-  "name": "discord-music-bot",
-  "version": "1.0.0",
-  "description": "A Discord bot with music playback and moderation features",
-  "main": "bot.js",
-  "scripts": {
-    "start": "node bot.js"
-  },
-  "dependencies": {
-    "discord.js": "^14.9.0",
-    "@discordjs/voice": "^0.16.0",
-    "dotenv": "^16.0.3",
-    "ytdl-core": "^4.11.4",
-    "yt-search": "^2.10.4",
-    "winston": "^3.8.2"
-  }
-}
